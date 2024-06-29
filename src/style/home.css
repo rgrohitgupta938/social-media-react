@@ -1,0 +1,145 @@
+.container {
+    margin-top: 50px;
+    width: 100%;
+    height: calc(100vh - 120px);
+    overflow: auto;
+    padding: 0px 50px;
+}
+
+.container .search-div {
+    position: relative;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.container .search-div .icon {
+    position: absolute;
+    top: 30%;
+    left: 15px
+}
+
+.container .search-div input {
+    width: 100%;
+    height: 43px;
+    border-radius: 10px;
+    box-shadow: 1px 8px 8px 0px #00000005;
+    border: none;
+    padding-left: 45px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0.02em;
+    text-align: left;
+    color: #595959;
+}
+
+.container .search-div input::placeholder {
+    color: #595959;
+}
+
+.post-container {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 30px;
+    justify-content: space-evenly;
+}
+
+.post-container .card {
+    width: calc(33% - 30px);
+    padding: 20px;
+    background-color: white;
+    border-radius: 26px;
+    min-height: 380px;
+    box-shadow: 12px 4px 26px 0px #0000000A;
+}
+
+.post-container .card .img-div {
+    background-color: white;
+    width: 100%;
+    height: 270px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: -1px 6px 15px 0px #C3C3C3;
+}
+
+.post-container .card .img-div img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.card .info {
+    display: flex;
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.card .info .left {
+    width: 80%;
+
+}
+
+.card .info .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-container .card .info .left h3 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21.94px;
+    text-align: left;
+    text-transform: capitalize;
+    color: #292931;
+}
+
+.post-container .card .info .left p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 6;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.07px;
+    text-align: left;
+    color: #C3C3C3;
+}
+
+.post-container .card .info .left .full-text {
+    display: block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17.07px;
+    text-align: left;
+    color: #C3C3C3;
+}
+
+.post-container .card .info .left .read-more {
+    color: #F05A22;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17.07px;
+}
+
+.post-container .card.expanded {
+    height: auto;
+}
+
+.loading {
+    width: 100%;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

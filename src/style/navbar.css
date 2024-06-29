@@ -1,0 +1,65 @@
+.navbar-new {
+    min-height: 70px;
+    width: 100%;
+    background-color: #F05A22;
+    box-shadow: 4px 14px 24px 0px #FFBE9DCF;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    position: relative;
+}
+
+.navbar-new .start {
+    color: white;
+    flex: 0 0 auto;
+    font-size: 22.02px;
+    font-weight: 700;
+    line-height: 26.84px;
+    text-align: center;
+}
+
+.navbar-new .center {
+    background-color: white;
+    width: 400px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 55px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.navbar-new .center div {
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar-new .center div.active::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #F05A22;
+}
+
+.navbar-new .center div .op {
+    color: #F05A22;
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.navbar-new .center div.active .op {
+    opacity: 1;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: white;
+}
