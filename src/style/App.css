@@ -29,7 +29,7 @@
     }
 
     .post-container .card {
-        width: 90% !important;
+        width: 100% !important;
     }
 
     .navbar-new {
@@ -56,4 +56,13 @@
         margin-top: 30px !important;
     }
 
+    .container {
+        padding: 0 30px !important;
+    }
+    .post-details .right-details{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 }

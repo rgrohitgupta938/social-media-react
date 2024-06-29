@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams, Link } from "react-router-dom";
 import { fetchPosts, setSel } from "./store/postSlice";
-import { Link } from "react-router-dom";
 import "./style/item.css";
 import more from "./images/more.svg";
 import { Oval } from "react-loader-spinner";
@@ -22,10 +21,6 @@ const Item = () => {
     }
     dispatch(setSel({ sel: 3 }));
   }, [dispatch]);
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [id]);
 
   const handleReadMore = (postId) => {
     setExpandedPosts((prevState) => ({
