@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams, Link } from "react-router-dom";
-import { fetchPosts, setSel } from "./store/postSlice";
-import "./style/item.css";
-import more from "./images/more.svg";
+import { useNavigate, useParams, Link, redirect } from "react-router-dom";
+import { fetchPosts, setSel } from "../store/postSlice";
+import "../style/item.css";
+import more from "../images/more.svg";
 import { Oval } from "react-loader-spinner";
+import Card from "../component/Card";
 
 const Item = () => {
   const { id } = useParams();
@@ -112,39 +113,13 @@ const Item = () => {
       <h2 id="more-post">More Posts</h2>
       <div className="more-details post-container">
         {remaningPost.length > 0 ? (
-          remaningPost.map((post) => (
-            <div
-              className={`card ${expandedPosts[post.id] ? "expanded" : ""}`}
-              key={post.id}
-            >
-              <div className="img-div">
-                <img
-                  src={`https://picsum.photos/200?random=${post.id}`}
-                  alt=""
-                />
-              </div>
-              <div className="info">
-                <div className="left">
-                  <h3>{post.title.substring(0, 25)}</h3>
-                  <p className={expandedPosts[post.id] ? "full-text" : ""}>
-                    {expandedPosts[post.id]
-                      ? post.body
-                      : post.body.substring(0, 100)}
-                    <span
-                      className="read-more"
-                      onClick={() => handleReadMore(post.id)}
-                    >
-                      {expandedPosts[post.id] ? " Show Less" : " Read More..."}
-                    </span>
-                  </p>
-                </div>
-                <div className="right">
-                  <Link to={`/item/${post.id}`}>
-                    <img src={more} alt="" />
-                  </Link>
-                </div>
-              </div>
-            </div>
+          remaningPost.map((post, inx) => (
+            <Card
+              key={inx}
+              post={post}
+              expandedPosts={expandedPosts}
+              handleReadMore={handleReadMore}
+            />
           ))
         ) : (
           <div className="loading">

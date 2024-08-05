@@ -1,0 +1,63 @@
+/* for both login and sign up heading */
+#user-login .heading,
+#user-signup .heading {
+    text-align: center;
+    color: #2D2D2D;
+    font-size: 40px !important;
+    margin-bottom: 30px;
+}
+
+#user-login {
+    width: 30%;
+    margin: 120px auto;
+    min-width: 600px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#user-login input {
+    width: 100%;
+    background-color: inherit;
+    color: #595959;
+    border: none;
+    border-bottom: 2px solid #F05A22;
+    height: 60px;
+    font-size: 24px;
+    padding: 20px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+/* for sign up and login button */
+#user-login button,
+#user-signup button {
+    width: 100%;
+    background-color: #F05A22;
+    border-radius: 0%;
+    border: none;
+    font-size: 20px;
+    text-align: center;
+    height: 40px;
+    margin-top: 40px;
+    color: whitesmoke;
+}
+
+#user-login .signup-link,
+#user-signup .login-link {
+    width: 100%;
+    text-decoration: none;
+    color: #F05A22;
+    text-align: start;
+    margin-top: 20px;
+}
+
+#user-login .error-message,
+#user-signup .error-message {
+    color: red;
+    width: 100%;
+    text-align: start;
+    margin-top: 10px;
+}

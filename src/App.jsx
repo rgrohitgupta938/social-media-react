@@ -1,11 +1,13 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "./component/Navbar";
 import "./style/App.css";
 import { Route, Routes } from "react-router-dom";
-import Home from "./Home";
-import Item from "./Item";
-import Bell from "./Bell";
-import Profile from "./Profile";
+import Home from "./pages/Home";
+import Item from "./pages/Item";
+import Bell from "./pages/Bell";
+import Profile from "./pages/Profile";
+import Login from "./pages/Login";
+import SignUp from "./pages/SignUp";
 
 const App = () => {
   return (
@@ -16,6 +18,8 @@ const App = () => {
         <Route path="/item/:id" element={<Item />} />{" "}
         <Route path="/notification" element={<Bell />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<SignUp />} />
       </Routes>
     </div>
   );

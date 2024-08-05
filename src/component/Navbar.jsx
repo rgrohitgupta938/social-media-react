@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./style/navbar.css";
+import "../style/navbar.css";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { setSel } from "./store/postSlice";
+import { setSel } from "../store/postSlice";
 
 const Navbar = () => {
   const dispatch = useDispatch();

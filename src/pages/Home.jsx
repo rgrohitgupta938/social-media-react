@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchPosts, setSel } from "./store/postSlice";
-import "./style/home.css";
-import more from "./images/more.svg";
+import { fetchPosts, setSel } from "../store/postSlice";
+import "../style/home.css";
 import { Link } from "react-router-dom";
 import { Oval } from "react-loader-spinner";
+import Card from "../component/Card";
 
 const Home = () => {
   const [search, setSearch] = useState("");
@@ -44,39 +44,8 @@ const Home = () => {
       </div>
       <div className="post-container">
         {posts.length > 0 ? (
-          posts.map((post) => (
-            <div
-              className={`card ${expandedPosts[post.id] ? "expanded" : ""}`}
-              key={post.id}
-            >
-              <div className="img-div">
-                <img
-                  src={`https://picsum.photos/200?random=${post.id}`}
-                  alt=""
-                />
-              </div>
-              <div className="info">
-                <div className="left">
-                  <h3>{post.title.substring(0, 25)}</h3>
-                  <p className={expandedPosts[post.id] ? "full-text" : ""}>
-                    {expandedPosts[post.id]
-                      ? post.body
-                      : post.body.substring(0, 100)}
-                    <span
-                      className="read-more"
-                      onClick={() => handleReadMore(post.id)}
-                    >
-                      {expandedPosts[post.id] ? " Show Less" : " Read More..."}
-                    </span>
-                  </p>
-                </div>
-                <div className="right">
-                  <Link to={`/item/${post.id}`}>
-                    <img src={more} alt="" />
-                  </Link>
-                </div>
-              </div>
-            </div>
+          posts.map((post,inx) => (
+            <Card key={inx} post={post} expandedPosts={expandedPosts} handleReadMore={handleReadMore} />
           ))
         ) : (
           <div className="loading">
