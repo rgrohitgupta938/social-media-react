@@ -6,6 +6,8 @@ import { BrowserRouter as Router } from "react-router-dom";
 import store from "./store/store.js";
 import { AuthProvider } from "./context/AuthContext.jsx";
 
+
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <Provider store={store}>

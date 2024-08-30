@@ -104,7 +104,6 @@
     margin: 5px 0 0;
     font-size: 14px;
     display: -webkit-box;
-    -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
     overflow: hidden;
     font-size: 14px;
@@ -142,4 +141,39 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.btn-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.btn-create {
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #F05A22;
+    box-shadow: 0 4px 8px rgba(255, 87, 34, 0.5);
+    color: white;
+    width: 250px;
+    align-self: center;
+    cursor: pointer;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 5px;
+    padding: 7px;
 }
